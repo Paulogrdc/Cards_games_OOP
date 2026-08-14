@@ -5,26 +5,37 @@ class Carta:
          self._estado = estado 
          self._codigo = None
          self._nome_cidade = nome_cidade 
-         self._população = população 
-         self._pib = pib 
-         self._area = area 
+         self._população = população #
+         self._pib = pib #
+         self._area = area #
          self._pontos_turistico = pontos_turistico 
 
          self.codigo = codigo
 
-    @property
-    def codigo(self):
-         return self._codigo
+    #@property
+    #def codigo(self):
+         #return self._codigo
     
-    @codigo.setter
-    def codigo(self,valor):
-         letras = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
-         numeros = [0,1,2,3,4]
-         if valor in numeros and valor.upper() in letras: 
-              self._codigo = valor
-         else: 
-              raise ValueError("Código invalido! O codigo deve ser composto por um número entre 0 até 4 e uma letra entre A até J.")
+    #@codigo.setter
+    #def codigo(self,valor):
+         #letras = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+         #numeros = [0,1,2,3,4]
+         #if valor in numeros and valor.upper() in letras: 
+          #    self._codigo = valor
+         #else: 
+          #    raise ValueError("Código invalido! O codigo deve ser composto por um número entre 0 até 4 e uma letra entre A até J.")
 
+
+    @property 
+    def população(self): 
+         return self._população 
+
+    @população.setter
+    def população(self,valor): 
+         if valor <= 0: 
+              raise ValueError("Valor invalido! ")
+         else: 
+              self._população = valor
 
 
     def densidade_populacional(self): 
