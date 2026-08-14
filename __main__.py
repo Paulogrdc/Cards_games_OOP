@@ -19,7 +19,7 @@ def main():
     print(f"O Pib per capoita é: {c1.pib_per_capita():.2f}")
     print(f"O Super Poder é: {c1.super_poder():.2f}")
 
-    #inspect(c1,private=True, methods=True ) 
+    inspect(c1,private=True, methods=True ) 
 
 
 
