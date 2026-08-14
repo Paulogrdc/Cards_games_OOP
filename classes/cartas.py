@@ -7,7 +7,7 @@ class Carta:
          self._nome_cidade = nome_cidade 
          self._população = população #
          self._pib = pib #
-         self._area = area #
+         self._area = area 
          self._pontos_turistico = pontos_turistico 
 
          self.codigo = codigo
@@ -36,6 +36,17 @@ class Carta:
               raise ValueError("Valor invalido! ")
          else: 
               self._população = valor
+
+    @property
+    def pib(self): 
+         return self._pib
+
+    @pib.setter 
+    def pib(self,valor): 
+         if valor <= 0: 
+              raise ValueError("Valor invalido!")
+         else: 
+              self._pib = valor
 
 
     def densidade_populacional(self): 
