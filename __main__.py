@@ -15,7 +15,9 @@ def main():
     c1.população = 3000
     c1.pib = 20_000
 
-    inspect(c1,private=True, methods=True ) 
+    print(f"A densidade Populacional é: {c1.densidade_populacional()}")
+
+    #inspect(c1,private=True, methods=True ) 
 
 
 

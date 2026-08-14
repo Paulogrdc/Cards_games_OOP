@@ -5,8 +5,8 @@ class Carta:
          self._estado = estado 
          self._codigo = None
          self._nome_cidade = nome_cidade 
-         self._população = população #
-         self._pib = pib #
+         self._população = população 
+         self._pib = pib 
          self._area = area 
          self._pontos_turistico = pontos_turistico 
 
@@ -49,15 +49,15 @@ class Carta:
               self._pib = valor
 
 
-    def densidade_populacional(self): 
+    def densidade_populacional(self): #população/area 
+         return self.população/self._area 
+
+
+    def pib_per_capita(self): # pib/população
          pass 
 
 
-    def pib_per_capita(self): 
-         pass 
-
-
-    def super_poder(self): 
+    def super_poder(self): #fazer uma media aritimetrica 
          pass
 
 
