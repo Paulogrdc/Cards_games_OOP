@@ -54,11 +54,16 @@ class Carta:
 
 
     def pib_per_capita(self): # pib/população
-         pass 
+         return self.pib/self.população 
 
 
     def super_poder(self): #fazer uma media aritimetrica 
-         pass
+         pib_per_capita = self.pib_per_capita()
+         densidade_populacional = self.densidade_populacional() 
+
+         super_poder = pib_per_capita + densidade_populacional + self.população + self._area + self.pib +  self._pontos_turistico/6 
+
+         return super_poder
 
 
 

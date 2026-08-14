@@ -16,6 +16,8 @@ def main():
     c1.pib = 20_000
 
     print(f"A densidade Populacional é: {c1.densidade_populacional()}")
+    print(f"O Pib per capoita é: {c1.pib_per_capita():.2f}")
+    print(f"O Super Poder é: {c1.super_poder():.2f}")
 
     #inspect(c1,private=True, methods=True ) 
 
