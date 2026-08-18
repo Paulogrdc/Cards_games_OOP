@@ -6,58 +6,67 @@ def guardar_mensagem():
     print("1-Como funciona o jogo")
     print("2-Cadastrar cartas")
     print("3-Mostrar cartas cadastradas")
-    print("4-Jogar")
+    print("4-Batalhar")
     print("5-Fechar jogo") 
 
 
-def casdatrar_Carta(): 
+def cadastrar_cartas(): 
     print("Cadastre a primeira carta")
-    c1= Carta(estado= input("Estado: "),
+    c1= Carta(
+        estado= input("Estado: "),
         codigo= input("Codigo: "),
         nome_cidade= input("Nome da cidade : "),
         população= input("População: "),
-        Pib= input("Pib: "), 
+        pib= input("Pib: "), 
         area= input("Área: "), 
         pontos_turistico= input("Pontos Turuisticos: "))
                         
     print("Cadastre a segunda carta")
-    c2 = Carta(estado= input("Estado: "),
+    c2 = Carta(
+        estado= input("Estado: "),
         codigo= input("Codigo: "),
         nome_cidade= input("Nome da cidade : "),
         população= input("População: "),
-        Pib= input("Pib: "), 
+        pib= input("Pib: "), 
         area= input("Área: "), 
         pontos_turistico= input("Pontos Turuisticos: "))
 
     return c1 ,c2 
 
 
+def mostrar_cartas(): 
+    pass
+
 
 
 def menu(): 
+    guardar_mensagem()
+    opcao = int(input("Escolha uma opação: "))
 
     while True: 
-        guardar_mensagem()
-        opcao = input("Escolha uma opação: ")
-
         match opcao: 
 
             case 1: 
                 print("Está funcionando!") 
                 guardar_mensagem()
-                opcao = input("Escolha uma opação: ")
-                
+                opcao = int(input("Escolha uma opação: "))    
+
             case 2: 
-                pass 
+                cadastrar_cartas()
+                guardar_mensagem()
+                opcao = int(input("Escolha uma opação: "))
 
             case 3: 
                 pass 
 
             case 4: 
-                pass 
+                pass
 
-            case 5:
+            case 5: 
                 break
+
+            case _: 
+                print("Valor invalido! essa opção não existe.") 
  
 
 
