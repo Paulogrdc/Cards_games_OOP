@@ -1,0 +1,3 @@
+{'_estado': 'RJ ', '_codigo': None, '_nome_cidade': 'Rio de Janeiro ', '_popula��o': '12345', '_pib': '456', '_area': '1123', '_pontos_turistico': '5', 'codigo': 'A1 '}
+
+{'_estado': 'SP ', '_codigo': None, '_nome_cidade': 'S�o Paulo ', '_popula��o': '23456', '_pib': '1233', '_area': '456', '_pontos_turistico': '1', 'codigo': 'B@]'}

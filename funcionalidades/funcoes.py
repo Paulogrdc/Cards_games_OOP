@@ -11,32 +11,39 @@ def guardar_mensagem():
 
 
 def cadastrar_cartas(): 
+    arq = open("guardar_cartas.txt", "a")
+
     print("Cadastre a primeira carta")
     c1= Carta(
-        estado= input("Estado: "),
+        estado= input("Estado: "),  
         codigo= input("Codigo: "),
         nome_cidade= input("Nome da cidade : "),
-        população= input("População: "),
+        populaçao= input("População: "),
         pib= input("Pib: "), 
         area= input("Área: "), 
         pontos_turistico= input("Pontos Turuisticos: "))
-                        
+    
+    dict_c1 = c1.__dict__ 
+    arq.writelines(str(dict_c1))
+
     print("Cadastre a segunda carta")
     c2 = Carta(
         estado= input("Estado: "),
         codigo= input("Codigo: "),
         nome_cidade= input("Nome da cidade : "),
-        população= input("População: "),
+        populacao= input("População: "),
         pib= input("Pib: "), 
         area= input("Área: "), 
         pontos_turistico= input("Pontos Turuisticos: "))
+    
+    dict_c1 = c2.__dict__ 
+    arq.writelines(str(dict_c1))
 
-    return c1 ,c2 
-
+    return c1, c2 
 
 def mostrar_cartas(): 
-    pass
-
+    arq = open("guardar_cartas.txt", "r")
+    print(arq.readlines())
 
 
 def menu(): 
@@ -56,8 +63,10 @@ def menu():
                 guardar_mensagem()
                 opcao = int(input("Escolha uma opação: "))
 
-            case 3: 
-                pass 
+            case 3:
+                mostrar_cartas()
+                guardar_mensagem()
+                opcao = int(input("Escolha uma opação: "))     
 
             case 4: 
                 pass

@@ -5,7 +5,7 @@ class Carta:
          self._estado = estado 
          self._codigo = None
          self._nome_cidade = nome_cidade 
-         self._população = população 
+         self._populacao = população 
          self._pib = pib 
          self._area = area 
          self._pontos_turistico = pontos_turistico 
