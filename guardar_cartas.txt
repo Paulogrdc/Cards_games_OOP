@@ -1,3 +1,1 @@
-{'_estado': 'RJ ', '_codigo': None, '_nome_cidade': 'Rio de Janeiro ', '_populaï¿½ï¿½o': '12345', '_pib': '456', '_area': '1123', '_pontos_turistico': '5', 'codigo': 'A1 '}
-
-{'_estado': 'SP ', '_codigo': None, '_nome_cidade': 'Sï¿½o Paulo ', '_populaï¿½ï¿½o': '23456', '_pib': '1233', '_area': '456', '_pontos_turistico': '1', 'codigo': 'B@]'}
+{'_estado': 'Rj ', '_codigo': None, '_nome_cidade': 'Rio de janeiro', '_populacao': '2345', '_pib': '2345', '_area': '123', '_pontos_turistico': '1', 'codigo': 'A1'}{'_estado': 'SP ', '_codigo': None, '_nome_cidade': 'São Paulo ', '_populacao': '12345', '_pib': '1234', '_area': '123', '_pontos_turistico': '5', 'codigo': 'B2'}

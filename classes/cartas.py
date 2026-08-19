@@ -27,15 +27,15 @@ class Carta:
 
 
     @property 
-    def população(self): 
-         return self._população 
+    def populacao(self): 
+         return self._populacao
 
-    @população.setter
-    def população(self,valor): 
+    @populacao.setter
+    def populacao(self,valor): 
          if valor <= 0: 
               raise ValueError("Valor invalido! ")
          else: 
-              self._população = valor
+              self._populacao = valor
 
     @property
     def pib(self): 
@@ -50,18 +50,18 @@ class Carta:
 
 
     def densidade_populacional(self): #população/area 
-         return self.população/self._area 
+         return self._populacao/self._area 
 
 
     def pib_per_capita(self): # pib/população
-         return self.pib/self.população 
+         return self.pib/self.populacao
 
 
     def super_poder(self): #fazer uma media aritimetrica 
          pib_per_capita = self.pib_per_capita()
          densidade_populacional = self.densidade_populacional() 
 
-         super_poder = pib_per_capita + densidade_populacional + self.população + self._area + self.pib +  self._pontos_turistico/6 
+         super_poder = pib_per_capita + densidade_populacional + self.populacao + self._area + self.pib +  self._pontos_turistico/6 
 
          return super_poder
 
