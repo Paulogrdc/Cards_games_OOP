@@ -1,4 +1,5 @@
 from classes.cartas import Carta 
+from rich import print
 
 # --- função para guardar as mensagem de opação ---
 def guardar_mensagem():
@@ -9,6 +10,14 @@ def guardar_mensagem():
     print("4-Batalhar")
     print("5-Fechar jogo") 
 
+
+
+def regras_jogo(): 
+    print("[blue]--------------------------REGRAS DO JOGO--------------------------[/]")
+    print("[yellow]1-DIGITE O ESTADO DE FORMA ABREVIADA. EX: RJ, PA, SP... \n"
+    "2- O CÓDIGO DEVE SER UMA LETRA DE A ATÉ F E UM NÚMERO 1 ATÉ 6\n"
+    "3- O JOGO TEM UM MODO DE BATALHA, ONDE QUEM GANNHA É QUEM TEM O [blue]SUPER PODER[/] MAIS FORTE. " \
+    "SUPER PODE É UMA MÉDIA ARITIMETRICA ENTRE ALGUMAS CARACTERISTICAS DA CARTA(PIB, ÁREA...)[/]")
 
 def cadastrar_cartas(): 
     arq = open("guardar_cartas.txt", "w")
@@ -57,7 +66,7 @@ def menu():
         match opcao: 
 
             case 1: 
-                print("Está funcionando!") 
+                regras_jogo()
                 guardar_mensagem()
                 opcao = int(input("Escolha uma opação: "))    
 
@@ -71,7 +80,6 @@ def menu():
                 guardar_mensagem()
                 opcao = int(input("Escolha uma opação: "))
                 
-     
 
             case 4: 
                 pass
