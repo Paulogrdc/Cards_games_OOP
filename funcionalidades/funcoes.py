@@ -24,7 +24,9 @@ def cadastrar_cartas():
         pontos_turistico= input("Pontos Turuisticos: "))
     
     dict_c1 = c1.__dict__ 
-    arq.writelines(str(dict_c1))
+    arq.write(str(f"Carta 1:{dict_c1}\n"))
+    arq.write(str("\n"))
+  
 
     print("Cadastre a segunda carta")
     c2 = Carta(
@@ -36,8 +38,8 @@ def cadastrar_cartas():
         area= input("Área: "), 
         pontos_turistico= input("Pontos Turuisticos: "))
     
-    dict_c1 = c2.__dict__ 
-    arq.writelines(str(dict_c1))
+    dict_c2= c2.__dict__ 
+    arq.write(str(f"Carta 2: {dict_c2}"))
 
     return c1, c2 
 
@@ -67,7 +69,9 @@ def menu():
             case 3:
                 mostrar_cartas()
                 guardar_mensagem()
-                opcao = int(input("Escolha uma opação: "))     
+                opcao = int(input("Escolha uma opação: "))
+                
+     
 
             case 4: 
                 pass
