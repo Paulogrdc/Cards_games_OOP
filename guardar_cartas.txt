@@ -1,3 +1,0 @@
-Carta 1:{'_estado': 'PA', '_codigo': None, '_nome_cidade': 'Parana ', '_populacao': '123456', '_pib': '12345', '_area': '123', '_pontos_turistico': '12', 'codigo': 'B2'}
-
-Carta 2: {'_estado': 'RJ ', '_codigo': None, '_nome_cidade': 'Rio de janeiro ', '_populacao': '1234567', '_pib': '123456', '_area': '1234', '_pontos_turistico': '12', 'codigo': 'C4'}

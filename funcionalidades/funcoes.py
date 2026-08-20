@@ -17,10 +17,10 @@ def regras_jogo():
     print("[yellow]1-DIGITE O ESTADO DE FORMA ABREVIADA. EX: RJ, PA, SP... \n"
     "2- O CÓDIGO DEVE SER UMA LETRA DE A ATÉ F E UM NÚMERO 1 ATÉ 6\n"
     "3- O JOGO TEM UM MODO DE BATALHA, ONDE QUEM GANNHA É QUEM TEM O [blue]SUPER PODER[/] MAIS FORTE. " \
-    "SUPER PODE É UMA MÉDIA ARITIMETRICA ENTRE ALGUMAS CARACTERISTICAS DA CARTA(PIB, ÁREA...)[/]")
+    "SUPER PODE É UMA MÉDIA ARITIMETRICA ENTRE ALGUMAS CARACTERISTICAS DA CARTA(PIB, ÁREA, POPULAÇÃO...)[/]")
 
 def cadastrar_cartas(): 
-    arq = open("guardar_cartas.txt", "w")
+    arq = open("database/guardar_cartas.txt", "w")
 
     print("Cadastre a primeira carta")
     c1= Carta(
@@ -53,7 +53,7 @@ def cadastrar_cartas():
     return c1, c2 
 
 def mostrar_cartas(): 
-    arq = open("guardar_cartas.txt", "r")
+    arq = open("database/guardar_cartas.txt", "r")
     for line in arq: 
         print(line)
 
