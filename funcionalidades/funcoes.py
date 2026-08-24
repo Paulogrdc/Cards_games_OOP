@@ -19,44 +19,61 @@ def regras_jogo():
     "3- O JOGO TEM UM MODO DE BATALHA, ONDE QUEM GANNHA É QUEM TEM O [blue]SUPER PODER[/] MAIS FORTE. " \
     "SUPER PODE É UMA MÉDIA ARITIMETRICA ENTRE ALGUMAS CARACTERISTICAS DA CARTA(PIB, ÁREA, POPULAÇÃO...)[/]")
 
-def cadastrar_cartas(): 
+def guardar_cartas(): 
+    # Abre o arquivo em modo de escrita 
     arq = open("database/guardar_cartas.txt", "w")
 
+    # Cadastra a primeira carta
     print("Cadastre a primeira carta")
     c1= Carta(
         estado= input("Estado: "),  
         codigo= input("Codigo: "),
         nome_cidade= input("Nome da cidade : "),
-        população= input("População: "),
-        pib= input("Pib: "), 
-        area= input("Área: "), 
-        pontos_turistico= input("Pontos Turuisticos: "))
-    
+        população= int(input("População: ")),
+        pib= int(input("Pib: ")), 
+        area= int(input("Área: ")), 
+        pontos_turistico= int(input("Pontos Turuisticos: "))) 
+
+    # Guarda a carta 1 no arquivo guardar_cartas.txt
     dict_c1 = c1.__dict__ 
     arq.write(str(f"Carta 1:{dict_c1}\n"))
-    arq.write(str("\n"))
-  
+    arq.write(str(f"Super Poder1 = {c1.super_poder()} \n"))
+    
 
+    # Cadastra a segunda carta
     print("Cadastre a segunda carta")
     c2 = Carta(
         estado= input("Estado: "),
         codigo= input("Codigo: "),
         nome_cidade= input("Nome da cidade : "),
-        população= input("População: "),
-        pib= input("Pib: "), 
-        area= input("Área: "), 
-        pontos_turistico= input("Pontos Turuisticos: "))
-    
+        população= int(input("População: ")),
+        pib= int(input("Pib: ")), 
+        area= int(input("Área: ")), 
+        pontos_turistico= int(input("Pontos Turuisticos: ")))   
+          
+    # Guarda a carta 2 no arquivo guardar_cartas.txt
     dict_c2= c2.__dict__ 
-    arq.write(str(f"Carta 2: {dict_c2}"))
-
-    return c1, c2 
+    arq.write(str(f"Carta 2: {dict_c2} \n"))
+    arq.write(str(f"Super Poder2 = {c2.super_poder()}"))
 
 def mostrar_cartas(): 
-    arq = open("database/guardar_cartas.txt", "r")
+    arq = open("database/guardar_cartas.txt", "r", encoding='utf8')
     for line in arq: 
         print(line)
 
+
+def batalhar():
+    arq = open("database/guardar_cartas.txt", "r", encoding='utf8')
+    list_power = []
+    for line in arq:
+        list_power.append(line)
+    super_poder1 =  float(list_power[1])
+    super_poder2 = float(list_power[3])
+
+    if super_poder1 > super_poder2:
+        print(f"A Carta 1 tem o super poder de: {super_poder1:.2f} e ela é a vencedora")
+    else: 
+        print(f"A Carta 2 tem o super poder de: {super_poder2:.2f} e ela é a vencedora")
 
 def menu(): 
     guardar_mensagem()
@@ -70,8 +87,10 @@ def menu():
                 guardar_mensagem()
                 opcao = int(input("Escolha uma opação: "))    
 
-            case 2: 
-                cadastrar_cartas()
+            case 2:                
+                guardar_cartas()
+                print("[green]Cartas Cadastradas com sucesso![/]")
+
                 guardar_mensagem()
                 opcao = int(input("Escolha uma opação: "))
 
@@ -82,7 +101,9 @@ def menu():
                 
 
             case 4: 
-                pass
+                batalhar()
+                guardar_mensagem()
+                opcao = int(input("Escolha uma opação: "))
 
             case 5: 
                 break

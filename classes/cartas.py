@@ -65,6 +65,28 @@ class Carta:
 
          return super_poder
 
+    # Polirmorfismo de overlooding tipo operador
+    def __lt__(self, outro):
+         super_poder = self.super_poder()
+
+         if self.super_poder < outro.super_poder: 
+               return True 
+         else: 
+               return False
+
+    def __eq__(self, outro):
+         super_poder = self.super_poder()
+         if self.super_poder ==  outro.super_poder: 
+               return True 
+         else: 
+              return False 
+
+    def __gt__(self, outro):
+         super_poder = self.super_poder()
+         if self.super_poder > outro.super_poder: 
+               return True 
+         else: 
+              return False
 
 
 

@@ -1,3 +1,3 @@
-Carta 1:{'_estado': 'PA', '_codigo': None, '_nome_cidade': 'Paulo ', '_populacao': '1234567', '_pib': '12345', '_area': '1234', '_pontos_turistico': '2', 'codigo': 'B1'}
-
-Carta 2: {'_estado': 'SP ', '_codigo': None, '_nome_cidade': 'São Paulo', '_populacao': '12345', '_pib': '1234', '_area': '123', '_pontos_turistico': '12', 'codigo': 'C2'}
+Carta 1:{'_estado': 'Rj ', '_codigo': None, '_nome_cidade': 'Rio de Janeiro', '_populacao': 12345, '_pib': 12345, '_area': 123, '_pontos_turistico': 1, 'codigo': 'C3'}
+Super Poder = 24914.532520325203 
+Carta 2: {'_estado': 'Cu', '_codigo': None, '_nome_cidade': 'Coritiba ', '_populacao': 12234, '_pib': 1243, '_area': 12, '_pontos_turistico': 12, 'codigo': 'C1'}Super Poder = 14510.601602092529
