@@ -1,5 +1,6 @@
 from classes.cartas import Carta 
 from rich import print
+import math 
 
 # --- função para guardar as mensagem de opação ---
 def guardar_mensagem():
@@ -37,7 +38,8 @@ def guardar_cartas():
     # Guarda a carta 1 no arquivo guardar_cartas.txt
     dict_c1 = c1.__dict__ 
     arq.write(str(f"Carta 1:{dict_c1}\n"))
-    arq.write(str(f"Super Poder1 = {c1.super_poder()} \n"))
+    arq.write(str(c1.super_poder()))
+    arq.write(str("\n"))
     
 
     # Cadastra a segunda carta
@@ -54,7 +56,8 @@ def guardar_cartas():
     # Guarda a carta 2 no arquivo guardar_cartas.txt
     dict_c2= c2.__dict__ 
     arq.write(str(f"Carta 2: {dict_c2} \n"))
-    arq.write(str(f"Super Poder2 = {c2.super_poder()}"))
+    arq.write(str(c2.super_poder()))
+
 
 def mostrar_cartas(): 
     arq = open("database/guardar_cartas.txt", "r", encoding='utf8')
@@ -63,17 +66,21 @@ def mostrar_cartas():
 
 
 def batalhar():
-    arq = open("database/guardar_cartas.txt", "r", encoding='utf8')
-    list_power = []
-    for line in arq:
-        list_power.append(line)
-    super_poder1 =  float(list_power[1])
-    super_poder2 = float(list_power[3])
+    with open("database/guardar_cartas.txt", "r", encoding='utf8') as arq:
+        list_power = []
+        for line in arq:
+            list_power.append(line)
+        super_poder1 = math.floor(float(list_power[1]))
+        super_poder2 = math.floor(float(list_power[3]))
 
-    if super_poder1 > super_poder2:
-        print(f"A Carta 1 tem o super poder de: {super_poder1:.2f} e ela é a vencedora")
-    else: 
-        print(f"A Carta 2 tem o super poder de: {super_poder2:.2f} e ela é a vencedora")
+        if super_poder1 > super_poder2:
+            print(f"A Carta 1 tem o super poder de: {super_poder1} pontos de poder e ela é a vencedora")
+        elif super_poder1 ==  super_poder2: 
+            print(f"A Carta 1 tem o super poder de: {super_poder1}")
+            print(f"A Carta 2 tem o super poder de: {super_poder2}")
+            print("Os Pontos de super poder das cartas são iguais. não há vencedor")
+        else: 
+           print(f"A Carta 2 tem o super poder de: {super_poder2}pontos de poder  e ela é a vencedora")
 
 def menu(): 
     guardar_mensagem()
