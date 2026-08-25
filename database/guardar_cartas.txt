@@ -1,4 +1,4 @@
-Carta 1:{'_estado': 'PA', '_codigo': None, '_nome_cidade': 'Parana ', '_populacao': 1234567, '_pib': 123324, '_area': 1234, '_pontos_turistico': 1, 'codigo': 'A1'}
-1360125.7260405412
-Carta 2: {'_estado': 'RS', '_codigo': None, '_nome_cidade': 'Rio grande do sul', '_populacao': 12345, '_pib': 1234, '_area': 123, '_pontos_turistico': 12, 'codigo': 'B2'} 
-13804.465813156308
+Carta 1:{'_estado': 'PA', '_codigo': None, '_nome_cidade': 'Parana ', '_populacao': 12345, '_pib': 1234, '_area': 123, '_pontos_turistico': 1, 'codigo': 'B1'}
+13802.632479822974
+Carta 2: {'_estado': 'MT', '_codigo': None, '_nome_cidade': 'Mato Grosso do Sul ', '_populacao': 123456, '_pib': 12345, '_area': 1234, '_pontos_turistico': 12, 'codigo': 'C3'} 
+137137.14537601516

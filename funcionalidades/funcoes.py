@@ -20,6 +20,7 @@ def regras_jogo():
     "3- O JOGO TEM UM MODO DE BATALHA, ONDE QUEM GANNHA É QUEM TEM O [blue]SUPER PODER[/] MAIS FORTE. " \
     "SUPER PODE É UMA MÉDIA ARITIMETRICA ENTRE ALGUMAS CARACTERISTICAS DA CARTA(PIB, ÁREA, POPULAÇÃO...)[/]")
 
+
 def guardar_cartas(): 
     # Abre o arquivo em modo de escrita 
     arq = open("database/guardar_cartas.txt", "w")
@@ -60,9 +61,15 @@ def guardar_cartas():
 
 
 def mostrar_cartas(): 
-    arq = open("database/guardar_cartas.txt", "r", encoding='utf8')
-    for line in arq: 
-        print(line)
+    with open("database/guardar_cartas.txt", "r", encoding='utf8') as arq: 
+        lista = []
+        for line in arq: 
+            lista.append(line)
+        carta1 = lista[0]
+        carta2 = lista[2]
+        print(f"{carta1}\n")
+        print(f"{carta2} ") 
+
 
 
 def batalhar():
