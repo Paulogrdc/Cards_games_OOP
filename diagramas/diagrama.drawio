@@ -1,0 +1,13 @@
+<mxfile host="65bd71144e">
+    <diagram id="lkhdvNPyQarHeNGRB297" name="Página-1">
+        <mxGraphModel dx="608" dy="294" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; cellpadding=&quot;4&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th align=&quot;center&quot;&gt;Carta&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;+ Estado: str&amp;nbsp;&lt;br&gt;+ Código: str&lt;br&gt;+ Nome_cidade: str&amp;nbsp;&lt;br&gt;+ População: float&lt;br&gt;+ Pib: float&lt;br&gt;+ Área: float&lt;br&gt;+ Pontos_Turisticos: float&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;+ densidade_Populacional(): float&lt;br&gt;+ pib_per_capita(): float&lt;br&gt;+ super_poder(): foat&lt;br&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=#000000;fillColor=#fff2cc;overflow=fill;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="50" width="200" height="190" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
