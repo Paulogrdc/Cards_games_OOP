@@ -91,8 +91,8 @@ class Carta:
          super_poder = self.super_poder()
          if self.super_poder > outro.super_poder: 
                return True 
-         else: 
-              return False
+         else:
+             return False
 
 
 
