@@ -18,16 +18,18 @@ class Carta:
     
     @codigo.setter
     def codigo(self,valor):
-          letras = ["A", "B", "C", "D"]
-          num = ["1", "2", "3", "4"]
-          codigos = []
-          for letras, num in zip(letras, num):
-               codigos.append(letras + num) 
-
-          if valor in codigos: 
-              self._codigo = valor
-          else: 
-              raise ValueError("Código invalido! O codigo deve ser composto por um número entre 1 até 4 e uma letra entre A até D.")
+        letras = ["A", "B", "C", "D"]
+        num = [1, 2, 3, 4]
+        codigos = []
+        while len(codigos) < 14:
+            for l in letras:
+                for n in num:
+                    codigos.append(l + str(n))
+                    n += 1
+            if valor.upper() in codigos:
+                self._codigo = valor
+            else:
+                raise ValueError("Código invalido! O codigo deve ser composto por um número entre 1 até 4 e uma letra entre A até D.")
 
 
     @property 
@@ -98,7 +100,7 @@ class Carta:
 
 
 
-c1 = Carta("Rj","A2","Rio de janeiro", 12345, 34567, 123, 1)
+c1 = Carta("Rj","b5","Rio de janeiro", 12345, 34567, 123, 1)
 
 inspect(c1, methods=True, private=True)
 
