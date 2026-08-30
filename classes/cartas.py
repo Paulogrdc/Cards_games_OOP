@@ -70,39 +70,3 @@ class Carta:
          super_poder = pib_per_capita + densidade_populacional + self.populacao + self._area + self.pib +  self._pontos_turistico/6 
 
          return super_poder
-
-    # Polirmorfismo de overlooding tipo operador
-    def __lt__(self, outro):
-         super_poder = self.super_poder()
-
-         if self.super_poder < outro.super_poder: 
-               return True 
-         else: 
-               return False
-
-    def __eq__(self, outro):
-         super_poder = self.super_poder()
-         if self.super_poder ==  outro.super_poder: 
-               return True 
-         else: 
-              return False 
-
-    def __gt__(self, outro):
-         super_poder = self.super_poder()
-         if self.super_poder > outro.super_poder: 
-               return True 
-         else:
-             return False
-
-
-
-
-
-
-
-c1 = Carta("Rj","b5","Rio de janeiro", 12345, 34567, 123, 1)
-
-inspect(c1, methods=True, private=True)
-
-
-
