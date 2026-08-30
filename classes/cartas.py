@@ -1,4 +1,4 @@
-
+from rich import inspect
 
 class Carta:
     def __init__(self, estado:str , codigo:str, nome_cidade:str, população:int|float , pib:int|float , area: int|float , pontos_turistico:int ):
@@ -12,18 +12,24 @@ class Carta:
 
          self.codigo = codigo
 
-    #@property
-    #def codigo(self):
-         #return self._codigo
+    @property
+    def codigo(self):
+         return self._codigo
     
-    #@codigo.setter
-    #def codigo(self,valor):
-         #letras = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
-         #numeros = [0,1,2,3,4]
-         #if valor in numeros and valor.upper() in letras: 
-          #    self._codigo = valor
-         #else: 
-          #    raise ValueError("Código invalido! O codigo deve ser composto por um número entre 0 até 4 e uma letra entre A até J.")
+    @codigo.setter
+    def codigo(self,valor):
+        letras = ["A", "B", "C", "D"]
+        num = [1, 2, 3, 4]
+        codigos = []
+        while len(codigos) < 14:
+            for l in letras:
+                for n in num:
+                    codigos.append(l + str(n))
+                    n += 1
+            if valor.upper() in codigos:
+                self._codigo = valor
+            else:
+                raise ValueError("Código invalido! O codigo deve ser composto por um número entre 1 até 4 e uma letra entre A até D.")
 
 
     @property 
